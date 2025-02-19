@@ -1,0 +1,6 @@
+ts15-rpi-shield-backups/*
+ts15-rpi-shield.kicad_prl
+fp-info-cache
+*.lck
+*.swp
+
