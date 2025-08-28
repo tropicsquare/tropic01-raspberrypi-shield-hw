@@ -1,36 +1,37 @@
-# About
+# TROPIC01 Raspberry Pi Shield
 
-TS15 – TROPIC01 Raspberry Pi Shield
-A KiCad-based hardware project designed to connect the TROPIC01 device to a Raspberry Pi via the standard 40-pin GPIO header.
+This repository contains the design files for the TROPIC01 development shield, designed for the Raspberry Pi form factor. Each folder corresponds to a specific PCB revision.
 
-This shield enables straightforward integration of TROPIC01 into Raspberry Pi-based development and testing environments.
-It is intended for development, evaluation, and prototyping use.
+### About TROPIC01
 
-# Project structure
+For more information about the TROPIC01 secure element, please see the official documentation:
 
-`*.kicad_pro` - KiCad project file
-`*.kicad_sch` - Schematic file
-`*.kicad_pcb` - PCB layout file
-`./out/` -  Generated Gerber files for PCB manufacturing
-`./bom/` - Bill of materials, including order codes and interactive BOM
-`./img/` - Images (e.g. PCB renders)
-`*_schematics.pdf` - Exported schematic diagrams (latest version)
+*   [TROPIC01 Datasheet](https://github.com/tropicsquare/tropic01/tree/main/doc/datasheet)
+*   [TROPIC01 Website](https://www.tropicsquare.com/tropic01)
 
-# Manufacturing instructions:
+# Getting Started
 
-## Assembly
+This guide will help you set up and use your TROPIC01 Raspberry Pi Shield.
 
-Because the Raspberry Pi has male GPIO pins, the shield's socket must be assembled on the bottom side 
-to connect properly when placed on top of the Pi. \
+### Prerequisites
 
-There are no any special requirements for C and R components.
-Where not specified the R tolerance is 5% and C 20%.
+*   A Raspberry Pi board running a Linux-based operating system.
 
-## PCB
+### Basic examples
 
-  Number of cu layers: 2 \
-  Board Thickness: 1.6 \
-  Core: FR4 \
-  Size: 56 x 65mm \
-  Mask: Blue \
-  Silkscreen: Yes (TOP only)
+To interact with the TROPIC01 chip on Linux-based systems like Raspberry Pi OS and Ubuntu, we provide the [`libtropic-linux`](https://github.com/tropicsquare/libtropic-linux) repository. This repository is an integration showcase of our platform-independent SDK, `libtropic`, which contains also basic examples.
+
+We recommend to clone it and **follow instructions to build examples**. Once examples are built, two examples are particulary useful when starting with devkit:
+
+*   **Get chip info**: Prints detailed information about the TROPIC01 chip on the shield.
+*   **Firmware update**: Updates the chip's firmware to the latest version (recommended)
+
+For more information, please follow `README.md` in the  [`libtropic-linux`](https://github.com/tropicsquare/libtropic-linux) repository.
+
+### Utility example
+
+To interact with the TROPIC01 chip on Linux-based systems like Raspberry Pi OS and Ubuntu, we provide [`libtropic-util`](https://github.com/tropicsquare/libtropic-util) repository. Follow [apropriate readme there](libtropic-util/docs/readmes for all devkits) based on devkit version you have.
+
+Or list?
+ * lt-util/doc/1501readme.md
+ * lt-util/doc/1502readme.md
