@@ -9,29 +9,25 @@ For more information about the TROPIC01 secure element, please see the official 
 *   [TROPIC01 Datasheet](https://github.com/tropicsquare/tropic01/tree/main/doc/datasheet)
 *   [TROPIC01 Website](https://www.tropicsquare.com/tropic01)
 
+# Raspberrypi Shield's Versions
+
+Following table shows all versions of distributed shields.
+
+| hw revision    | Picture                                                                                                            |
+|----------------|----------------------------------------|
+| 1501           |  [Top](./TS1501_design/img/top.png)    |
+
 # Getting Started
 
-This guide will help you set up and use your TROPIC01 Raspberry Pi Shield.
+To interact with the TROPIC01 chip on Linux-based systems like Raspberry Pi OS and Ubuntu, we provide the [`libtropic-linux`](https://github.com/tropicsquare/libtropic-linux) repository, containing integration examples of our platform-independent SDK, [`libtropic`](https://github.com/tropicsquare/libtropic).
 
-### Prerequisites
+ > [!IMPORTANT]
+ > Before you start with various examples, we strongly recommend to do two things first:
+ > * Read CHIP ID and TROPIC01's firmware versions and **save printed output for future reference**
+ > * Update TROPIC01's both internal firmware to latest version.
 
-*   A Raspberry Pi board running a Linux-based operating system.
+In [`libtropic-linux`](https://github.com/tropicsquare/libtropic-linux) repository, you can find specifice instruction for both operations based on hardware you use.
 
-### Basic examples
+### Command line utility
 
-To interact with the TROPIC01 chip on Linux-based systems like Raspberry Pi OS and Ubuntu, we provide the [`libtropic-linux`](https://github.com/tropicsquare/libtropic-linux) repository. This repository is an integration showcase of our platform-independent SDK, `libtropic`, which contains also basic examples.
-
-We recommend to clone it and **follow instructions to build examples**. Once examples are built, two examples are particulary useful when starting with devkit:
-
-*   **Get chip info**: Prints detailed information about the TROPIC01 chip on the shield.
-*   **Firmware update**: Updates the chip's firmware to the latest version (recommended)
-
-For more information, please follow `README.md` in the  [`libtropic-linux`](https://github.com/tropicsquare/libtropic-linux) repository.
-
-### Utility example
-
-To interact with the TROPIC01 chip on Linux-based systems like Raspberry Pi OS and Ubuntu, we provide [`libtropic-util`](https://github.com/tropicsquare/libtropic-util) repository. Follow [apropriate readme there](libtropic-util/docs/readmes for all devkits) based on devkit version you have.
-
-Or list?
- * lt-util/doc/1501readme.md
- * lt-util/doc/1502readme.md
+Once you saved results of `show_chip_id_and_fw_ver` example (for future reference) and after your chip is updated with `fw_update` example, you can test our comand line application. Check out [`lt-util`](https://github.com/tropicsquare/libtropic-util) repository, you can find there specifice instruction based on hardware you use.
